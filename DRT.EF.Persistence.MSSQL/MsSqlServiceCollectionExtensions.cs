@@ -10,9 +10,9 @@ namespace DRT.Persistence.MSSQL
             this IServiceCollection serviceCollection,
             IConfiguration config = null)
         {
-            serviceCollection.AddDbContext<FnzDbContext, MsSqlFnzDbContext>(options =>
+            serviceCollection.AddDbContext<DRTDbContext, MsSqlDRTDbContext>(options =>
             {
-                options.UseSqlServer(config.GetConnectionString("FnzDbContext"), b => b.MigrationsAssembly("DRT.Persistence.MSSQL"));
+                options.UseSqlServer(config.GetConnectionString("DRTDbContext"), b => b.MigrationsAssembly("DRT.Persistence.MSSQL"));
             });
             return serviceCollection;
         }

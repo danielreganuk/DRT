@@ -10,9 +10,9 @@ namespace DRT.Application.CQRS.Users.Queries.GetUserDetail
 {
     public class GetUserDetailQueryHandler : IRequestHandler<GetUserDetailQuery, UserDetailModel>
     {
-        private readonly IFnzDbContext _context;
+        private readonly IDRTDbContext _context;
 
-        public GetUserDetailQueryHandler(IFnzDbContext context)
+        public GetUserDetailQueryHandler(IDRTDbContext context)
         {
             _context = context;
         }

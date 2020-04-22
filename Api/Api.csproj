@@ -22,11 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fnz.EF.Application\DRT.Application.csproj" />
-    <ProjectReference Include="..\Fnz.EF.Domain\DRT.Domain.csproj" />
-    <ProjectReference Include="..\Fnz.EF.MySQL\DRT.Persistence.MySQL.csproj" />
-    <ProjectReference Include="..\Fnz.EF.Persistence.MSSQL\DRT.Persistence.MSSQL.csproj" />
-    <ProjectReference Include="..\Fnz.EF.Persistence\DRT.Persistence.csproj" />
+    <ProjectReference Include="..\DRT.EF.Application\DRT.Application.csproj" />
+    <ProjectReference Include="..\DRT.EF.Domain\DRT.Domain.csproj" />
+    <ProjectReference Include="..\DRT.EF.MySQL\DRT.Persistence.MySQL.csproj" />
+    <ProjectReference Include="..\DRT.EF.Persistence.MSSQL\DRT.Persistence.MSSQL.csproj" />
+    <ProjectReference Include="..\DRT.EF.Persistence\DRT.Persistence.csproj" />
   </ItemGroup>
 
 

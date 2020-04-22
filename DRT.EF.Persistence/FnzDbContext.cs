@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DRT.Persistence
 {
-    public class FnzDbContext : DbContext, IFnzDbContext
+    public class DRTDbContext : DbContext, IDRTDbContext
     {
-        public FnzDbContext()
+        public DRTDbContext()
         {
         }
 
-        public FnzDbContext(DbContextOptions options)
+        public DRTDbContext(DbContextOptions options)
             : base(options)
         {
         }
@@ -23,7 +23,7 @@ namespace DRT.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(FnzDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DRTDbContext).Assembly);
         }
     }
 }

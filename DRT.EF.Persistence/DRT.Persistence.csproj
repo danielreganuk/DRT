@@ -10,8 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fnz.EF.Application\DRT.Application.csproj" />
-    <ProjectReference Include="..\Fnz.EF.Domain\DRT.Domain.csproj" />
+    <ProjectReference Include="..\DRT.EF.Application\DRT.Application.csproj" />
+    <ProjectReference Include="..\DRT.EF.Domain\DRT.Domain.csproj" />
   </ItemGroup>
 
 </Project>

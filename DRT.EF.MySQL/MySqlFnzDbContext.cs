@@ -3,9 +3,9 @@ using DRT.Persistence;
 
 namespace DRT.Persistence.MySQL
 {
-    public class MySqlFnzDbContext : FnzDbContext
+    public class MySqlDRTDbContext : DRTDbContext
     {
-        public MySqlFnzDbContext(DbContextOptions options) : base(options)
+        public MySqlDRTDbContext(DbContextOptions options) : base(options)
         {
         }
     }

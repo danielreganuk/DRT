@@ -11,17 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{7DC6B8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C6C8DEA9-1A3E-4F68-97E2-7ADA4F90CF22}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Persistence", "Fnz.EF.Persistence\DRT.Persistence.csproj", "{827524F5-830E-4F01-AC76-01DDB0C563C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Persistence", "DRT.EF.Persistence\DRT.Persistence.csproj", "{827524F5-830E-4F01-AC76-01DDB0C563C6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Persistence.MySQL", "Fnz.EF.MySQL\DRT.Persistence.MySQL.csproj", "{BB4F4A34-D65D-4B90-9634-B0A2996AB728}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Persistence.MySQL", "DRT.EF.MySQL\DRT.Persistence.MySQL.csproj", "{BB4F4A34-D65D-4B90-9634-B0A2996AB728}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Domain", "Fnz.EF.Domain\DRT.Domain.csproj", "{1B1C9E31-F9AB-473A-BFB3-97E1254A4BB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Domain", "DRT.EF.Domain\DRT.Domain.csproj", "{1B1C9E31-F9AB-473A-BFB3-97E1254A4BB4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Application", "Fnz.EF.Application\DRT.Application.csproj", "{7F5E341D-EA0C-4BC6-8813-4C63B5CB4A49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Application", "DRT.EF.Application\DRT.Application.csproj", "{7F5E341D-EA0C-4BC6-8813-4C63B5CB4A49}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Application.Test", "Fnz.EF.Application.Test\DRT.Application.Test.csproj", "{EF70AF76-A0B8-4303-965A-95A1B4C9CF6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRT.Application.Test", "DRT.EF.Application.Test\DRT.Application.Test.csproj", "{EF70AF76-A0B8-4303-965A-95A1B4C9CF6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRT.Persistence.MSSQL", "Fnz.EF.Persistence.MSSQL\DRT.Persistence.MSSQL.csproj", "{DE48363E-6A86-4FB3-9971-41F406A84BA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRT.Persistence.MSSQL", "DRT.EF.Persistence.MSSQL\DRT.Persistence.MSSQL.csproj", "{DE48363E-6A86-4FB3-9971-41F406A84BA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -14,14 +14,14 @@ namespace DRT.Persistence
         private readonly Dictionary<int, Account> Accounts = new Dictionary<int, Account>();
         private readonly Dictionary<int, Case> Cases = new Dictionary<int, Case>();
 
-        public static void Initialize(FnzDbContext context)
+        public static void Initialize(DRTDbContext context)
         {
             var initializer = new FnzInitializer();
             initializer.SeedEverything(context);
         }
 
 
-        public void SeedEverything(FnzDbContext context)
+        public void SeedEverything(DRTDbContext context)
         {
             context.Database.EnsureCreated();
 
@@ -36,7 +36,7 @@ namespace DRT.Persistence
         }
 
 
-        public void SeedAccounts(FnzDbContext context)
+        public void SeedAccounts(DRTDbContext context)
         {
             
             Accounts.Add(1,
@@ -87,7 +87,7 @@ namespace DRT.Persistence
             context.SaveChanges();
         }
 
-        public void SeedUsers(FnzDbContext context)
+        public void SeedUsers(DRTDbContext context)
         {
             Users.Add(1, 
                 new User
@@ -143,7 +143,7 @@ namespace DRT.Persistence
 
         }
 
-        private void SeedCases(FnzDbContext context)
+        private void SeedCases(DRTDbContext context)
         {
             Cases.Add(1, new Case
             {

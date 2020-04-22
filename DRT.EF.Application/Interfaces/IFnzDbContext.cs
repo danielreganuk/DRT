@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace DRT.Application.Interfaces
 {
-    public interface IFnzDbContext
+    public interface IDRTDbContext
     {
         DbSet<T> Set<T>() where T : class;
 

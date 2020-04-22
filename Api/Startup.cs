@@ -36,12 +36,12 @@ namespace Api
             services.AddControllers();
             services.AddConfiguredDbContext(Configuration);
             services.AddMediatR(typeof(GetUserDetailQuery).Assembly);
-            services.AddScoped<IFnzDbContext>(s => s.GetService<FnzDbContext>());
+            services.AddScoped<IDRTDbContext>(s => s.GetService<DRTDbContext>());
             services.AddAutoMapper(new Assembly[] {typeof(AutoMapperProfile).GetTypeInfo().Assembly});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, FnzDbContext ctx)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DRTDbContext ctx)
         {
             if (env.IsDevelopment())
             {

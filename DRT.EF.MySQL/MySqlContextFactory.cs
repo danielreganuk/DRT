@@ -4,22 +4,22 @@ using Microsoft.Extensions.Configuration;
 
 namespace DRT.Persistence.MySQL
 {
-    public class MySqlContextFactory : IDesignTimeDbContextFactory<MySqlFnzDbContext>
+    public class MySqlContextFactory : IDesignTimeDbContextFactory<MySqlDRTDbContext>
     {
-        public MySqlFnzDbContext CreateDbContext(string[] args)
+        public MySqlDRTDbContext CreateDbContext(string[] args)
         {
             var config = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", false)
                 .AddJsonFile("appsettings.local.json", true)
                 .Build();
 
-            var builder = new DbContextOptionsBuilder<FnzDbContext>();
+            var builder = new DbContextOptionsBuilder<DRTDbContext>();
             builder.UseMySql(
-                config.GetConnectionString("FnzDbContext"),
+                config.GetConnectionString("DRTDbContext"),
                 b => b.MigrationsAssembly("DRT.Persistence.MySQL")
             );
 
-            return new MySqlFnzDbContext(builder.Options);
+            return new MySqlDRTDbContext(builder.Options);
         }
     }
 }

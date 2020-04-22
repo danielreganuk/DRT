@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fnz.EF.Persistence\DRT.Persistence.csproj" />
+    <ProjectReference Include="..\DRT.EF.Persistence\DRT.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>
