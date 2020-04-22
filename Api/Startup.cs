@@ -60,7 +60,7 @@ namespace Api
             });
 
             ctx.Database.Migrate();
-            FnzInitializer.Initialize(ctx);
+            DRTInitializer.Initialize(ctx);
         }
     }
 }

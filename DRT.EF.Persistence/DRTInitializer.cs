@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using DRT.Domain.Entities;
+﻿using DRT.Domain.Entities;
 using DRT.Domain.Enums;
 using Microsoft.EntityFrameworkCore.Internal;
+using System;
+using System.Collections.Generic;
 
 namespace DRT.Persistence
 {
-    public class FnzInitializer
+    public class DRTInitializer
     {
         private readonly Dictionary<int, User> Users = new Dictionary<int, User>();
         private readonly Dictionary<int, Account> Accounts = new Dictionary<int, Account>();
@@ -16,10 +14,9 @@ namespace DRT.Persistence
 
         public static void Initialize(DRTDbContext context)
         {
-            var initializer = new FnzInitializer();
+            var initializer = new DRTInitializer();
             initializer.SeedEverything(context);
         }
-
 
         public void SeedEverything(DRTDbContext context)
         {
@@ -35,10 +32,8 @@ namespace DRT.Persistence
             SeedCases(context);
         }
 
-
         public void SeedAccounts(DRTDbContext context)
         {
-            
             Accounts.Add(1,
                 new Account
                 {
@@ -49,7 +44,6 @@ namespace DRT.Persistence
                         new AccountUser { FirstName  = "Jed", LastName = "Hue", Username = "jhue", EmailAddress = "jhue@foobar.co.uk" },
                         new AccountUser { FirstName  = "Roger", LastName = "Gracie", Username = "rgracie", EmailAddress = "rgracie@foobar.co.uk" }
                     }
-
                 });
 
             Accounts.Add(2,
@@ -62,7 +56,6 @@ namespace DRT.Persistence
                         new AccountUser { FirstName  = "Keenan", LastName = "Kai-James", Username = "keenankj", EmailAddress = "keenankj@thegulag.co.uk" },
                         new AccountUser { FirstName  = "Miha", LastName = "Perovic", Username = "mperovic", EmailAddress = "mperovic@thegulag.co.uk" }
                     }
-
                 });
 
             Accounts.Add(3,
@@ -75,9 +68,7 @@ namespace DRT.Persistence
                         new AccountUser { FirstName  = "Dan", LastName = "Strauss", Username = "dstrauss", EmailAddress = "dstrauss@um.co.uk" },
                         new AccountUser { FirstName  = "Josh", LastName = "Hinger", Username = "jhinger", EmailAddress = "jhinger@um.co.uk" }
                     }
-
                 });
-
 
             foreach (var account in Accounts.Values)
             {
@@ -89,12 +80,12 @@ namespace DRT.Persistence
 
         public void SeedUsers(DRTDbContext context)
         {
-            Users.Add(1, 
+            Users.Add(1,
                 new User
                 {
                     FirstName = "Bruno",
                     LastName = "Malfacine",
-                    EmailAddress = "bmalfacine@fnz.com",
+                    EmailAddress = "bmalfacine@drt.com",
                     Username = "bmalfacine"
                 });
 
@@ -103,7 +94,7 @@ namespace DRT.Persistence
                 {
                     FirstName = "Craig",
                     LastName = "Jones",
-                    EmailAddress = "cjones@fnz.com",
+                    EmailAddress = "cjones@drt.com",
                     Username = "cjones"
                 });
 
@@ -112,7 +103,7 @@ namespace DRT.Persistence
                 {
                     FirstName = "Gordon",
                     LastName = "Ryan",
-                    EmailAddress = "gryan@fnz.com",
+                    EmailAddress = "gryan@drt.com",
                     Username = "gryan"
                 });
 
@@ -121,7 +112,7 @@ namespace DRT.Persistence
                 {
                     FirstName = "Lucas",
                     LastName = "Lepri",
-                    EmailAddress = "llepri@fnz.com",
+                    EmailAddress = "llepri@drt.com",
                     Username = "llepri"
                 });
 
@@ -130,7 +121,7 @@ namespace DRT.Persistence
                 {
                     FirstName = "Ryan",
                     LastName = "Hall",
-                    EmailAddress = "rhall5050@fnz.com",
+                    EmailAddress = "rhall5050@drt.com",
                     Username = "rhall5050"
                 });
 
@@ -140,14 +131,13 @@ namespace DRT.Persistence
             }
 
             context.SaveChanges();
-
         }
 
         private void SeedCases(DRTDbContext context)
         {
             Cases.Add(1, new Case
             {
-                UserFriendlyId = "FNZ02",
+                UserFriendlyId = "DRT102",
                 Title = "Support Issue 01",
                 OpenedDate = new DateTime(2020, 1, 1),
                 Priority = PriorityLevel.Medium,
@@ -164,7 +154,7 @@ namespace DRT.Persistence
 
             Cases.Add(2, new Case
             {
-                UserFriendlyId = "FNZ411",
+                UserFriendlyId = "DRT411",
                 Title = "Support Issue 02",
                 OpenedDate = new DateTime(2020, 3, 30),
                 Priority = PriorityLevel.Low,
@@ -181,7 +171,7 @@ namespace DRT.Persistence
 
             Cases.Add(3, new Case
             {
-                UserFriendlyId = "FNZ380",
+                UserFriendlyId = "DRT380",
                 Title = "Support Issue 03",
                 OpenedDate = new DateTime(2020, 4, 3),
                 Priority = PriorityLevel.High,
@@ -196,14 +186,12 @@ namespace DRT.Persistence
                 }
             });
 
-            foreach(var ticket in Cases.Values)
+            foreach (var ticket in Cases.Values)
             {
                 context.Set<Case>().Add(ticket);
             }
 
             context.SaveChanges();
         }
-
-
     }
 }
